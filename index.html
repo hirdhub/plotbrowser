@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PlotBrowser Proof of Concept</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.0.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.0.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.0.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.0.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.0.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-api-3.0.2.min.js"></script>
+  </head>
+  <body>
+	<script src="index.js"></script>
+    <div class="container">
+      <div id="output" class="output"><div class="placeholder">Placeholder for plot data</div></div>
+      <div class="input">
+        <div id="database" class="switch-toggle switch-3">
+
+          <input id="v" value="v" name="state-database" type="radio" checked="checked" />
+          <label for="v" onclick="">VehDB</label>
+        
+          <input id="b" value="b" name="state-database" type="radio" />
+          <label for="b" onclick="">BioDB</label>
+        
+          <input id="c" value="b" name="state-database" type="radio" />
+          <label for="c" onclick="">ComDB</label>
+        
+        </div>
+        <input id="TSTNO" placeholder="test number (TSTNO)" />
+        <button type="button" onclick="getINST()">Get Instrumentation List</button>
+        <!-- <input id="CURNO" placeholder="curve number (CURNO)" />
+        <button type="button" onclick="makePlot()">Generate Plot</button> -->
+        <button type="button" onclick="copyData()">Copy Plot Data to Clipboard</button>
+      </div>
+        <div id="instList" class="table-wrapper"><div class="placeholder">Placeholder for instrumentation list</div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>
+
+
